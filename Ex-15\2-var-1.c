@@ -30,7 +30,7 @@ int main(){
       flag=1;
       break;
     }
-    else if (k1==1 && len>2){
+    else if (k1==1){
       for (int j=0; j<len; j++){
         if (n!=j && graph[n][j]==1){
           k2++;
