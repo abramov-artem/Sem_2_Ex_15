@@ -23,13 +23,16 @@ int main(){
       if (i>j && graph[i][j]==1){
         k1++;
       }
-      else if (i==j && graph[i][j]==1){
+      if (i==j && graph[i][j]==1){
         printf("Это псевдограф");
         flag=1;
         break;
       }
     }
+    if (flag==1) break;
   }
-  if (flag!=1 && k1>(len-1)*(len-2)/2) printf("Граф связный");
-  else printf("Граф несвзяный");
+  if (flag!=1){
+    if (k1>(len-1)*(len-2)/2) printf("Граф связный");
+    else printf("Граф несвзяный");
+  }
 }
